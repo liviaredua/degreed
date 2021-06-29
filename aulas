@@ -1,0 +1,10 @@
+import pandas as pd
+df = pd.read_csv('2102.csv', skiprows= 2 , sep= ';') # o skip rows faz voce pular as linhas, e o sep fala como os dados estao separados
+df.head() # pra ler as 5 primeiras linhas
+df.tail() # 5 ultimas linhas 
+df.dropna(inplace = True) # ele vai tirar p sempre ( pq tem o inplace) todos os NaN que sao not a number 
+# df.shape # me mostra as linhas e colunas 
+# len(df) # me mostra a qnt de colunas 
+#df.columns # me mostra uma listagem das minhas colunas 
+df['Ano de Lançamento'].value_counts() # contar qnts vezes aparece algo em uma coluna
+df.duplicated().value_counts() # ele conta se exite linhas duplicadas
